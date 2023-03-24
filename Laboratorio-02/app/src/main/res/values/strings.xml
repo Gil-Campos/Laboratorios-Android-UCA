@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Laboratorio-02</string>
+    <string name="app_name">BMI</string>
+    <string name="weight_card_title">Weight</string>
+    <string name="weight_unit_card_title">Kg</string>
+    <string name="hint_weight_cardview">70</string>
+    <string name="height_unit_card_title">cm</string>
+    <string name="hint_height_cardview">180</string>
+    <string name="height_card_title">Height</string>
+    <string name="btn_calculate_bmi">calculate</string>
+    <string name="normal_range_bmi">Normal range is 18.5 - 24.9</string>
 </resources>
