@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Laboratorio-01</string>
+    <string name="title_header">Bienvenidos a:</string>
+    <string name="lower_text">Programacion de \nDispositivos\nMoviles</string>
+    <string name="android_image_descr">Android Robot saying hi!</string>
+</resources>
