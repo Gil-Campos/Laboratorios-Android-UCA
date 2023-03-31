@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="x_large_gap_margin">64dp</dimen>
+    <dimen name="large_gap_margin">32dp</dimen>
+    <dimen name="money_image_size">125dp</dimen>
+    <dimen name="gap_margin">16dp</dimen>
+    <dimen name="medium_gap_margin">8dp</dimen>
+</resources>
