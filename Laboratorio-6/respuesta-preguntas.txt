@@ -1,6 +1,6 @@
 ¿En qué consiste el patrón de diseño Repository?
 
-El patron repository es util para crear codigo modular y sea mas facil de utilizar a la hora de testing. Separa las capas de UI, ViewModel y persistencia de datos al tener esta poca union entre capas es mas sencillo hacer cambios en el codigo sin que otras partes dejen de funcionar debido a los cambios realizados.
+El patron repository es util para crear codigo modular y sea mas facil de utilizar a la hora de testing. Separa las capas de UI, ViewModel y persistencia de datos al tener esta poca union entre capas es mas sencillo hacer cambios en el codigo sin que otras partes dejen de funcionar debido a los cambios realizados este patron es util para mantener el codigo a largo plazo pero no veremos ningun tipo de mejor en tiempo de ejecucion.
 
 ¿Qué es el ViewModel?
 
