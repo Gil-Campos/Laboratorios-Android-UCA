@@ -1,0 +1,7 @@
+¿En qué consiste el patrón de diseño Repository?
+
+El patron repository es util para crear codigo modular y sea mas facil de utilizar a la hora de testing. Separa las capas de UI, ViewModel y persistencia de datos al tener esta poca union entre capas es mas sencillo hacer cambios en el codigo sin que otras partes dejen de funcionar debido a los cambios realizados.
+
+¿Qué es el ViewModel?
+
+El ViewModel nos ayuda a preservar los estados de los datos a nivel de UI haciendo una encapsulacion de la logica empresarial algo muy importante es que sobrevive a cambios de configuracion y actua como intermediario entre el modelo y las vistas para resumir el viewmodel se comunica con el repositorio que almacena los datos en base al modelo creado para brindarselos a las vistas que lo solicitan.

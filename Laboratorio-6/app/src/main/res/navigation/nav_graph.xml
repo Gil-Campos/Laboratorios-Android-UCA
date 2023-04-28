@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/billboardFragment">
+
+    <fragment
+        android:id="@+id/billboardFragment"
+        android:name="com.gilbertocampos.laboratorio6.BillboardFragment"
+        android:label="fragment_billboard"
+        tools:layout="@layout/fragment_billboard" />
+</navigation>
