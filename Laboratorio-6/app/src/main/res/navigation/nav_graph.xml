@@ -9,5 +9,22 @@
         android:id="@+id/billboardFragment"
         android:name="com.gilbertocampos.laboratorio6.BillboardFragment"
         android:label="fragment_billboard"
-        tools:layout="@layout/fragment_billboard" />
+        tools:layout="@layout/fragment_billboard" >
+        <action
+            android:id="@+id/action_billboardFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
+        <action
+            android:id="@+id/action_billboardFragment_to_newMovieFragment"
+            app:destination="@id/newMovieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.gilbertocampos.laboratorio6.movieFragment"
+        android:label="fragment_movie"
+        tools:layout="@layout/fragment_movie" />
+    <fragment
+        android:id="@+id/newMovieFragment"
+        android:name="com.gilbertocampos.laboratorio6.newMovieFragment"
+        android:label="fragment_new_movie"
+        tools:layout="@layout/fragment_new_movie" />
 </navigation>

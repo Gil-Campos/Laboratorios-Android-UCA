@@ -2,4 +2,7 @@
     <string name="app_name">Laboratorio-6</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="billboard">Billboard</string>
+    <string name="stars_wars_movie_desc">Star Wars episodio 3: La venganza de los Sith</string>
+    <string name="star_wars_calification">9.8</string>
 </resources>
