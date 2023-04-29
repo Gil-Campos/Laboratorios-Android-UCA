@@ -13,6 +13,10 @@ class MovieViewModel(private var repository: MovieRepository) : ViewModel() {
         return  repository.getMovies()
     }
 
+    fun addNewMovie(movie: Movie) {
+        repository.addNewMovie(movie)
+    }
+
     companion object {
         val Factory = viewModelFactory {
             initializer {
