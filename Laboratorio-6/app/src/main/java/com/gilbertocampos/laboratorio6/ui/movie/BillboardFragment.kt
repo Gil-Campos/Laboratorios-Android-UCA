@@ -1,4 +1,4 @@
-package com.gilbertocampos.laboratorio6
+package com.gilbertocampos.laboratorio6.ui.movie
 
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
+import com.gilbertocampos.laboratorio6.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 

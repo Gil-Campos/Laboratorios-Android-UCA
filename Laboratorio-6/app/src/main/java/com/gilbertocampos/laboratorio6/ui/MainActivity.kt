@@ -1,8 +1,10 @@
-package com.gilbertocampos.laboratorio6
+package com.gilbertocampos.laboratorio6.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import com.gilbertocampos.laboratorio6.R
+import com.gilbertocampos.laboratorio6.ui.movie.MovieViewModel
 
 class MainActivity : AppCompatActivity() {
 
