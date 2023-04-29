@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import com.gilbertocampos.laboratorio6.R
-import com.gilbertocampos.laboratorio6.ui.movie.MovieViewModel
+import com.gilbertocampos.laboratorio6.viewmodels.MovieViewModel
 
 class MainActivity : AppCompatActivity() {
 

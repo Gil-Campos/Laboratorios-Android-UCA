@@ -18,7 +18,8 @@
         android:focusable="true"
         android:src="@android:drawable/ic_input_add"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/fab_desc" />
 
     <TextView
         android:id="@+id/title"
@@ -82,10 +83,11 @@
                 style="@style/TextAppearance.MaterialComponents.Headline5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:text="@string/star_wars_calification"
                 android:textColor="@color/calification"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/star_wars_desc"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
                 app:layout_constraintTop_toBottomOf="@+id/star_wars_desc" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -139,10 +141,11 @@
                 style="@style/TextAppearance.MaterialComponents.Headline5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/star_wars_calification"
+                android:layout_marginStart="16dp"
+                android:text="@string/harry_potter_calification"
                 android:textColor="@color/calification"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/harry_potter_desc"
+                app:layout_constraintStart_toEndOf="@+id/harry_potter_img"
                 app:layout_constraintTop_toBottomOf="@+id/harry_potter_desc" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,7 @@ import androidx.cardview.widget.CardView
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import com.gilbertocampos.laboratorio6.R
+import com.gilbertocampos.laboratorio6.viewmodels.MovieViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 

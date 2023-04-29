@@ -1,4 +1,4 @@
-package com.gilbertocampos.laboratorio6.ui.movie
+package com.gilbertocampos.laboratorio6.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewmodel.initializer

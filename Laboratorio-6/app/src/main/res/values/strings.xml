@@ -6,6 +6,7 @@
     <string name="new_movie">New Movie</string>
     <string name="stars_wars_movie_desc">Star Wars episodio 3: La venganza de los Sith</string>
     <string name="star_wars_calification">9.8</string>
+    <string name="harry_potter_calification">9.5</string>
     <string name="ciencia_ficcion">Ciencia Ficcion</string>
     <string name="movie_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque sollicitudin aliquet. Nunc nunc purus, malesuada in risus a, placerat consequat libero. Aliquam malesuada pulvinar nunc id dapibus. Sed tristique condimentum orci eu euismod. Morbi et ipsum ac neque porttitor aliquam id eget mi. </string>
     <string name="name">Name</string>
@@ -13,4 +14,5 @@
     <string name="description">Description</string>
     <string name="calification">Calification</string>
     <string name="submit">Submit</string>
+    <string name="fab_desc">Add new movie to the list</string>
 </resources>
