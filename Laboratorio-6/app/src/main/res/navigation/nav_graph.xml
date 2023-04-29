@@ -19,12 +19,12 @@
     </fragment>
     <fragment
         android:id="@+id/movieFragment"
-        android:name="com.gilbertocampos.laboratorio6.movieFragment"
+        android:name="com.gilbertocampos.laboratorio6.MovieFragment"
         android:label="fragment_movie"
         tools:layout="@layout/fragment_movie" />
     <fragment
         android:id="@+id/newMovieFragment"
-        android:name="com.gilbertocampos.laboratorio6.newMovieFragment"
+        android:name="com.gilbertocampos.laboratorio6.NewMovieFragment"
         android:label="fragment_new_movie"
         tools:layout="@layout/fragment_new_movie" />
 </navigation>
