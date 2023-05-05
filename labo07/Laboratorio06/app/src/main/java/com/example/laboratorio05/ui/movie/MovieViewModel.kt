@@ -1,5 +1,6 @@
 package com.example.laboratorio05.ui.movie
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory.Companion.APPLICATION_KEY
 import androidx.lifecycle.viewmodel.initializer
@@ -8,11 +9,53 @@ import com.example.laboratorio05.MovieReviewerApplication
 import com.example.laboratorio05.data.model.MovieModel
 import com.example.laboratorio05.repositories.MovieRepository
 
-class MovieViewModel(private val repository: MovieRepository) : ViewModel(){
+class MovieViewModel(private val repository: MovieRepository) : ViewModel() {
+
+    val name = MutableLiveData("")
+    val category = MutableLiveData("")
+    val description = MutableLiveData("")
+    val qualification = MutableLiveData("")
+    val status = MutableLiveData("")
 
     fun getMovies() = repository.getMovies()
 
     fun addMovies(movie: MovieModel) = repository.addMovies(movie)
+
+    private fun validateData(): Boolean {
+        when {
+            name.value.isNullOrEmpty() -> return false
+            category.value.isNullOrEmpty() -> return false
+            description.value.isNullOrEmpty() -> return false
+            qualification.value.isNullOrEmpty() -> return false
+        }
+        return true
+    }
+
+    private fun clearData() {
+        name.value = ""
+        category.value = ""
+        description.value = ""
+        qualification.value = ""
+    }
+
+    fun clearStatus() {
+        status.value = INACTIVE
+    }
+
+    fun createMovie() {
+        if (validateData()) {
+            status.value = WRONG_INFORMATION
+            return
+        }
+
+        val movie =
+            MovieModel(name.value!!, category.value!!, description.value!!, qualification.value!!)
+
+        addMovies(movie)
+        clearData()
+
+        status.value = MOVIE_CREATED
+    }
 
     companion object {
         val Factory = viewModelFactory {
@@ -21,5 +64,9 @@ class MovieViewModel(private val repository: MovieRepository) : ViewModel(){
                 MovieViewModel(app.movieRepository)
             }
         }
+
+        const val MOVIE_CREATED = "Movie Created"
+        const val WRONG_INFORMATION = "Wrong Information"
+        const val INACTIVE = ""
     }
 }

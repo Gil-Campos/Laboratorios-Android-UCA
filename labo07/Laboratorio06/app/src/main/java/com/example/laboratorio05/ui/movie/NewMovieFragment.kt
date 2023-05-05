@@ -12,6 +12,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.laboratorio05.R
 import com.example.laboratorio05.data.model.MovieModel
+import com.example.laboratorio05.databinding.FragmentNewMovieBinding
 
 class NewMovieFragment : Fragment() {
 
@@ -19,54 +20,46 @@ class NewMovieFragment : Fragment() {
         MovieViewModel.Factory
     }
 
-    private lateinit var nameEditText: EditText
-    private lateinit var categoryEditText: EditText
-    private lateinit var descriptionEditText: EditText
-    private lateinit var qualificationEditText: EditText
-    private lateinit var summitButton: Button
+    private lateinit var binding: FragmentNewMovieBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_new_movie, container, false)
+        binding = FragmentNewMovieBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setViewModel()
+        observerStatus()
+    }
 
-        bind()
-        summitButton.setOnClickListener {
-            addMovie()
+    private fun setViewModel() {
+        binding.viewmodel = movieViewModel
+    }
+
+    private fun observerStatus() {
+        movieViewModel.status.observe(viewLifecycleOwner) { status ->
+            when {
+                status.equals(MovieViewModel.WRONG_INFORMATION) -> {
+                    Log.d(APP_TAG, status)
+                    movieViewModel.clearStatus()
+                }
+
+                status.equals(MovieViewModel.MOVIE_CREATED) -> {
+                    Log.d(APP_TAG, status)
+                    Log.d(APP_TAG, movieViewModel.getMovies().toString())
+
+                    movieViewModel.clearStatus()
+                    findNavController().popBackStack()
+                }
+            }
         }
     }
 
-    private fun bind() {
-        nameEditText = view?.findViewById(R.id.name_edit_text) !!
-        categoryEditText = view?.findViewById(R.id.category_edit_text) !!
-        descriptionEditText = view?.findViewById(R.id.description_edit_text) !!
-        qualificationEditText = view?.findViewById(R.id.qualification_edit_text) !!
-        summitButton = view?.findViewById(R.id.submit_button) !!
+    companion object {
+        const val APP_TAG = "App Tag"
     }
-
-    // add a movie using the view model
-    private fun addMovie() {
-
-        val name = nameEditText.text.toString()
-        val category = categoryEditText.text.toString()
-        val description = descriptionEditText.text.toString()
-        val qualification = qualificationEditText.text.toString()
-
-        val movie = MovieModel(name, category, description, qualification)
-
-        movieViewModel.addMovies(movie)
-
-        Log.d("NewMovieFragment", movieViewModel.getMovies().toString())
-
-        findNavController().popBackStack()
-    }
-
-
-
 }
