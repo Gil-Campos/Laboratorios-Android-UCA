@@ -43,7 +43,7 @@ class MovieViewModel(private val repository: MovieRepository) : ViewModel() {
     }
 
     fun createMovie() {
-        if (validateData()) {
+        if (!validateData()) {
             status.value = WRONG_INFORMATION
             return
         }
@@ -55,6 +55,13 @@ class MovieViewModel(private val repository: MovieRepository) : ViewModel() {
         clearData()
 
         status.value = MOVIE_CREATED
+    }
+
+    fun selectedMovie(movie: MovieModel) {
+        name.value = movie.name
+        category.value = movie.category
+        description.value = movie.description
+        qualification.value = movie.qualification
     }
 
     companion object {

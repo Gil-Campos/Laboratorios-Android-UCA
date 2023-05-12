@@ -25,19 +25,19 @@
                 android:layout_width="@dimen/extraLargeGap"
                 android:layout_height="@dimen/extraLargeGap"
                 android:layout_marginTop="@dimen/mediumGap"
-                android:src="@drawable/starawars"
+                android:src="@drawable/baseline_image_not_supported_24"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/titleTextViewMovie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/smallGap"
                 android:layout_marginTop="@dimen/smallGap"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="@string/starWarsText"
+                tools:text="@string/starWarsText"
                 android:textColor="@color/white"
                 android:textSize="@dimen/mediumTextGap"
                 android:textStyle="bold"
@@ -46,41 +46,42 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/typeTextViewMovie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/mediumGap"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="@string/category"
+                tools:text="@string/category"
                 android:textColor="@color/white"
                 android:textSize="@dimen/mediumTextGap"
-                app:layout_constraintEnd_toStartOf="@+id/textView5"
+                app:layout_constraintEnd_toStartOf="@+id/qualifTextViewMovie"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                app:layout_constraintTop_toBottomOf="@+id/titleTextViewMovie" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/qualifTextViewMovie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/starWarsCalification"
+                tools:text="@string/starWarsCalification"
                 android:textColor="@color/calification"
                 android:textSize="@dimen/largeTextGap"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView6"
-                app:layout_constraintTop_toTopOf="@+id/textView6" />
+                app:layout_constraintStart_toEndOf="@+id/typeTextViewMovie"
+                app:layout_constraintTop_toTopOf="@+id/typeTextViewMovie" />
 
             <TextView
+                android:id="@+id/descTextViewMovie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/mediumGap"
                 android:layout_marginTop="@dimen/mediumGap"
                 android:layout_marginEnd="@dimen/mediumGap"
                 android:padding="@dimen/smallGap"
-                android:text="@string/descriptionStarWars"
+                tools:text="@string/descriptionStarWars"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="@+id/textView7"
-                app:layout_constraintStart_toStartOf="@+id/textView7"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                app:layout_constraintEnd_toEndOf="@+id/titleTextViewMovie"
+                app:layout_constraintStart_toStartOf="@+id/titleTextViewMovie"
+                app:layout_constraintTop_toBottomOf="@+id/qualifTextViewMovie" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

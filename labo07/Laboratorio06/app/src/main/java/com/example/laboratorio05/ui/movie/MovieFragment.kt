@@ -29,9 +29,17 @@ class MovieFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setViewModel()
+        displayMovie()
     }
 
     private fun setViewModel() {
         binding.viewmodel = movieViewModel
+    }
+
+    private fun displayMovie() {
+        binding.titleTextViewMovie.text = movieViewModel.name.value
+        binding.typeTextViewMovie.text = movieViewModel.category.value
+        binding.qualifTextViewMovie.text = movieViewModel.qualification.value
+        binding.descTextViewMovie.text = movieViewModel.description.value
     }
 }

@@ -59,6 +59,8 @@ class NewMovieFragment : Fragment() {
         }
     }
 
+
+
     companion object {
         const val APP_TAG = "App Tag"
     }
