@@ -1,13 +1,11 @@
 package com.example.laboratorio11.ui.login
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.Toast
-import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
@@ -15,14 +13,14 @@ import com.example.laboratorio11.R
 import com.example.laboratorio11.RetrofitApplication
 import com.example.laboratorio11.databinding.FragmentLoginBinding
 import com.example.laboratorio11.ui.login.viewmodel.LoginViewModel
-import com.google.android.material.snackbar.Snackbar
 
 
 class LoginFragment : Fragment() {
 
     private val loginViewModel: LoginViewModel by viewModels { LoginViewModel.Factory }
 
-    private lateinit var binding: FragmentLoginBinding
+    private var _binding: FragmentLoginBinding? = null
+    private val binding get() = _binding!!
 
     val app by lazy {
         requireActivity().application as RetrofitApplication
@@ -32,7 +30,7 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentLoginBinding.inflate(inflater, container, false)
+        _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
     }
 
