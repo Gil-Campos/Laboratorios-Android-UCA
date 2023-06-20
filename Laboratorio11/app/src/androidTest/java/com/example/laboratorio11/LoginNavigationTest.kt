@@ -29,7 +29,7 @@ class LoginNavigationTest {
             Navigation.setViewNavController(it.requireView(), navController)
         }
 
-        onView(withId(R.id.emailField)).perform(typeText("bryan@gmail.com"))
+        onView(withId(R.id.emailField)).perform(typeText("test@test.com"))
         onView(withId(R.id.passwordField)).perform(typeText("12345678"))
         onView(withId(R.id.loginBtn)).perform(click())
 
